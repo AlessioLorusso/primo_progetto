@@ -94,11 +94,6 @@ def queryBase(request):
     #5 tutti gli articoli che non hanno visualizzazioni
     articoli_senza_visualizzazioni = Articolo.objects.filter(visualizzazioni=0)
 
-
-
-
-
-    '''
     #6 articolo più visualizzato
     articolo_piu_visualizzato = Articolo.objects.order_by('visualizzazioni').first()
 
@@ -129,7 +124,6 @@ def queryBase(request):
 
     #15 tutti gli articoli che contengono una certa parola nel titolo
     articoli_parola = Articolo.objects.filter(titolo__incontais='importante')
-    '''
     #creare il dizionario context
     context = {
         'articoli_cognome':articoli_cognome,
@@ -137,7 +131,7 @@ def queryBase(request):
         'giornalista_1': giornalista_1,
         'numero_articoli_giornalista_1': numero_articoli_giornalista_1,
         'articoli_ordinati': articoli_ordinati,
-        'articoli_senza_visualizzazioni': articoli_senza_visualizzazioni,'''
+        'articoli_senza_visualizzazioni': articoli_senza_visualizzazioni,
         'articolo_piu_visualizzato': articolo_piu_visualizzato,
         'giornalisti_data': giornalisti_data,
         'articoli_del_giorno': articoli_del_giorno,
@@ -148,6 +142,6 @@ def queryBase(request):
         'giornalista_anziano': giornalista_anziano,
         'ultimi': ultimi,
         'articoli_minime_visualizzazioni': articoli_minime_visualizzazioni,
-        'articoli_parola': articoli_parola,'''
+        'articoli_parola': articoli_parola,
     }
     return render(request,'query.html', context)
