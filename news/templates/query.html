@@ -90,6 +90,19 @@ Query
 <li>L'articolo {{articolo.titolo}} contiene la parola ha nel titolo</li>
 {% endfor %}
 </ul>
-    
+
+<h6> Query 16: Articoli pubblicati nel mese di novembre </h6>
+<ul>
+    {% for articolo in articoli_mese_anno %}
+    <li>{{articolo.titolo}}</li>
+    {% endfor %}
+</ul>
+
+<h6> Query 17: Giornalisti con almeno un articolo con 100 visualizzazioni </h6>
+<ul>
+    {% for giornalista in giornalisti_con_articoli_popolari %}
+        <li>{{giornalista.nome}} {{giornalista.cognome}} </li>
+    {% endfor %}
+</ul>
 
 {% endblock content%}
