@@ -105,4 +105,26 @@ Query
     {% endfor %}
 </ul>
 
+<h6> Query 18: articoli con and </h6>
+<ul>
+    {% for articolo in articoli_con_and %}
+        <li>{{articolo.titolo}}  </li>
+    {% endfor %}
+</ul>
+
+<h6> Query 19: articoli con or </h6>
+<ul>
+    {% for articolo in articoli_con_or %}
+        <li>{{articolo.titolo}} </li>
+    {% endfor %}
+</ul>
+
+<h6> Query 20: articoli con not </h6>
+<ul>
+    {% for articolo in articoli_con_not %}
+        <li>{{articolo.titolo}} </li>
+    {% endfor %}
+</ul>
+
+
 {% endblock content%}

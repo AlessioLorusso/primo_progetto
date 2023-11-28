@@ -61,6 +61,11 @@ def listaArticoli(request, pk):
     }
     return render(request,'lista_articoli.html',context)"""
     
+def giornalistaDetailView(request, pk):
+    giornalista = get_object_or_404(Giornalista, pk=pk)
+    context= {"giornalista": giornalista}
+    return render(request, "giornalista_detail.html", context)
+
 def listaArticoli(request, pk=None):
     if(pk==None):
         articoli= Articolo.objects.all()
@@ -77,6 +82,10 @@ def listaGiornalisti(request, pk):
         'giornalisti': giornalisti,
     }
     return render(request,'lista_giornalisti.html',context)
+
+def index_news(request):
+    return render(request,"index_news.html")
+
 
 def queryBase(request):
     #1 tutti gli articoli scritti da giornalisti di un certo cognome:
