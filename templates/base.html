@@ -16,7 +16,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Primo progetto</a>
+        <a class="navbar-brand" href="{% url 'index_root' %}" >Primo progetto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,6 +54,18 @@
                   <a class="dropdown-item" href="{% url 'seconda_app:index2'%}">index2</a>
                 </div>
               </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  News
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'news:homeview'%}">homeview</a>
+                  <a class="dropdown-item" href="{% url 'news:lista_articoli'%}">lista articoli </a>
+                  <a class="dropdown-item" href="{% url 'news:query_base'%}">query base</a>
+                </div>
+            </li>
               
             
           </ul>

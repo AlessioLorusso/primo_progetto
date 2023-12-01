@@ -1,0 +1,1 @@
+C:\Users\aless\OneDrive\Documenti\django\env\Scripts\activate

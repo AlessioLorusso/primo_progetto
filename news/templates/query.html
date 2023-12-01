@@ -1,0 +1,130 @@
+{% extends 'base.html' %} 
+{%block title%}
+Query
+{% endblock title%}
+{%block content%}
+<h1>Query</h1>
+<h6>Query 1: articoli scritti da un certo giornalista</h6>
+{% for articolo in articoli_cognome %}
+    <p>{{articolo.titolo}}</p> 
+    <p>{{articolo.contenuto}}</p>
+    <p>{{articolo.giornalista}}</p>
+{% endfor%}
+<h6>Query 2: numero totale di articoli</h6>
+<p>{{ numero_totale_articoli }}</p> 
+
+<h6>Query 2: totale di articoli scritti da un giornalista</h6>
+<p><strong>Giornalista 5 : </strong>{{ giornalista_1 }}</p> 
+
+<h6>Query 3: totale di articoli scritti da un giornalista</h6>
+<p><strong>Numero articoli giornalista 5 : </strong>{{ numero_articoli_giornalista_1 }}</p>
+
+<h6>Query 4: articoli ordinati per numero di visualizzazioni </h6>
+{% for articolo in articoli_ordinati %}
+    <li> {{articolo.titolo}}- Visualizzazioni: {{articolo.visualizzazioni}}</li>
+{% endfor%}
+
+<h6>Query 5: articoli senza visualizzazioni</h6>
+<ul>
+{%for articolo in articoli_senza_visualizzazioni%}
+    <li> {{articolo.titolo}} </li>
+{% endfor %}
+</ul>
+
+
+<h6>Query 6: articolo più visualizzato </h6>
+<p> {{articolo_piu_visualizzato.titolo}}- Visualizzazioni: {{articolo_piu_visualizzato.visualizzazioni}}</p>
+
+<h6>Query 7: giornalisti nati dopo il 1990</h6>
+<ul>
+    {% for giornalista in giornalisti_data %}
+        <li>{{giornalista.nome}} {{giornalista.cognome}}</li>
+
+    {% endfor %}
+</ul>
+
+<h6> Query 8:  articoli pubblicati l' 1/1/2023 </h6>
+<ul>
+{% for articolo in articoli_del_giorno %}
+<li> {{articolo.titolo}} </li>
+{%endfor%}
+</ul>
+
+<h6> Query 9: articoli pubblicati tra il 1/1/2023 e il 31/12/2023</h6>
+<ul>
+{% for articolo in articoli_periodo %}
+<li> {{articolo.titolo}} </li>
+{% endfor %}
+</ul>
+
+<h6> Query 10: articoli scritti da giornalisti nati prima del 1980 </h6>
+<ul>
+{% for articolo in articoli_giornalisti %}
+<li>{{articolo.titolo}}  -- scritto da {{articolo.giornalista.nome }} {{articolo.giornalista.cognome }}</li>
+{% endfor %}
+</ul>
+
+<h6>Query 11: giornalista più giovane </h6> 
+<p> {{giornalista_giovane.nome }} {{giornalista_giovane.cognome}} nato il: {{giornalista_giovane.anno_di_nascita}}</p>
+
+<h6> Query 12: giornalista più anziano </h6>
+<p> {{giornalista_anziano.nome }} {{giornalista_anziano.cognome}} nato il: {{giornalista_anziano.anno_di_nascita}}</p>
+
+<h6> Query 13: gli ultimi 5 articoli pubblicati</h6>
+<ul>
+{% for articolo in ultimi %}
+<li>{{articolo.titolo}} pubblicato il {{articolo.data}} </li>
+{% endfor %}
+</ul>
+
+<h6> Query 14: Articoli con almeno 100 visualizzazioni </h6>
+<ul>
+{% for articolo in articoli_minime_visualizzazioni %}
+<li>{{articolo.titolo}} con {{articolo.visualizzazioni}} visualizzazioni</li>
+{% endfor %}
+</ul>
+
+<h6> Query 15: Articoli con ha nel titolo</h6>
+<ul>
+{% for articolo in articoli_parola %}
+<li>L'articolo {{articolo.titolo}} contiene la parola ha nel titolo</li>
+{% endfor %}
+</ul>
+
+<h6> Query 16: Articoli pubblicati nel mese di novembre </h6>
+<ul>
+    {% for articolo in articoli_mese_anno %}
+    <li>{{articolo.titolo}}</li>
+    {% endfor %}
+</ul>
+
+<h6> Query 17: Giornalisti con almeno un articolo con 100 visualizzazioni </h6>
+<ul>
+    {% for giornalista in giornalisti_con_articoli_popolari %}
+        <li>{{giornalista.nome}} {{giornalista.cognome}} </li>
+    {% endfor %}
+</ul>
+
+<h6> Query 18: articoli con and </h6>
+<ul>
+    {% for articolo in articoli_con_and %}
+        <li>{{articolo.titolo}}  </li>
+    {% endfor %}
+</ul>
+
+<h6> Query 19: articoli con or </h6>
+<ul>
+    {% for articolo in articoli_con_or %}
+        <li>{{articolo.titolo}} </li>
+    {% endfor %}
+</ul>
+
+<h6> Query 20: articoli con not </h6>
+<ul>
+    {% for articolo in articoli_con_not %}
+        <li>{{articolo.titolo}} </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock content%}
