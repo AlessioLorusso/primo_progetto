@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+import random
+{%block title %}  {{block.super}} | media {%endblock title%}
+
+{%block content%}
+    <b>listaN = {{listaN}}</b> <br/>
+
+    {% if m < 6  %}
+    <p style="color:Tomato;">media={{m}}</p>
+    {% elif m > 6 %}
+    <p style="color:MediumSeaGreen;">media={{m}}</p>
+    {% else %}
+    <p>media={{m}}</p>
+    {% endif %} 
+
+{%endblock content%} 
