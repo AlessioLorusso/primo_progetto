@@ -2,8 +2,9 @@
 {%block title %}  {{block.super}} | voti {%endblock title%}
 {%block content%}
 <ul> 
-    {% for studente , voto in my_dict.items %}
-        <li>{{ studente }}: {{ voto }} </li>
+    {% for materia in materie %}
+        <li>{{ materia }} </li>
+        
     {% endfor %}
 </ul>
 {%endblock content%} 

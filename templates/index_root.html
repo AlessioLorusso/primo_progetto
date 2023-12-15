@@ -2,13 +2,15 @@
 {%block title %}  {{block.super}} | Document {%endblock title%}
 {%block content%}
 
-    <a href="/admin">Pannello admin</a>
+    <a href="/admin">Pannello admin...</a>
     <br>
     <a href="{% url 'prima_app:index'%} ">index Prima app</a>
     <br>
     <a href="{% url 'seconda_app:index2'%} ">index Seconda app</a>
     <br>
     <a href="{% url 'news:index_news'%} ">index news</a>
+    <br>
+    <a href="{% url 'voti:index3'%} ">index voti</a>
     <br>
 
 

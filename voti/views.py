@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Materia, Voti,materie,nomeP,media, nome,materia,voto
+from .models import Materia, Voti
 
 
 # Create your views here.
@@ -13,6 +13,8 @@ from .models import Materia, Voti,materie,nomeP,media, nome,materia,voto
 #def queryBase(request){
 
 #}
+def index3(request):
+    return render(request,"index3.html")
 
 def home(request):
      materie = Materia.objects.all()

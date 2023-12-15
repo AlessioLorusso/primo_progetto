@@ -1,9 +1,9 @@
 from django.shortcuts import render
 # Create your views here.
 import random
-
 def Index_1(request):
     return render(request,"Index_1.html")
+
 
 def somma(request):
     
