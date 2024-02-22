@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import *
 
 
@@ -15,4 +16,7 @@ urlpatterns= [
     path('lista_articoli/',listaArticoli, name="lista_articoli"),
     path('lista_giornalisti/',listaGiornalisti, name="lista_giornalisti"),
     path('query_base/',queryBase, name="query_base"),
+    path('lista_giornalisti_api/',giornalisti_list_api, name="giornalisti_list_api"),
+    path('lista_giornalisti_api/',giornalista_api, name="giornalista_api"),
+
 ]
