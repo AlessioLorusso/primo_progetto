@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+import random
+{%block title %}  {{block.super}} | somma {%endblock title%}
+
+{%block content%}
+    <b>n1= {{n1}}</b> <br/>
+    <b>n2= {{n2}}</b> <br/>
+    <b>n3= {{n3}}</b> <br/>
+    {% if n1 < n2 %}
+    <p style="color:Tomato;">{{n1}}</p>
+    <p style="color:MediumSeaGreen;">{{n2}}</p>
+    {% elif n1 > n2 %}
+    <p style="color:MediumSeaGreen;">{{n1}}</p>
+    <p style="color:Tomato;">{{n2}}</p>
+    {% else %}
+    <p>Numeri uguali</p>
+    {% endif %} 
+    
+    
+    
+
+{%endblock content%} 
