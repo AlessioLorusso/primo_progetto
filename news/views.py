@@ -127,7 +127,7 @@ def articolo_api(request,pk):
         data={'articolo':{
             "titolo":articolo.titolo,
             "contenuto":articolo.contenuto,
-            "giornalista":articolo.giornalista,
+            "giornalista":articolo.giornalista.nome,
             "data":articolo.data,
             "visualizzazioni":articolo.visualizzazioni,
 
