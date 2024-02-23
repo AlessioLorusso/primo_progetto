@@ -8,7 +8,7 @@ class Manufacturer(models.Model):
     active=models.BooleanField(default=True)
 
     def __str__(self):
-        return self.nome
+        return self.name
     
 class Product(models.Model):
     manufacturer= models.ForeignKey(Manufacturer,
@@ -18,7 +18,7 @@ class Product(models.Model):
     description = models.TextField(black=True, null=True)
     photo = models.ImageField(black=True, null=True)
     price= models.FloatField()
-    shopping_cost = models.FloatField()
+    shipping_cost = models.FloatField()
     quantity= models.PositiveSmallIntegerField()
 
     def __str__(self):

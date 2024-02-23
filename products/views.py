@@ -19,7 +19,7 @@ def product_detail(request, pk):
             "description": product.description,
             "photo": product.photo.url,
             "price": product.price,
-            "shopping_cost": product.shopping_cost,
+            "shipping_cost": product.shipping_cost,
             "quantity": product.quantity,
         }}
         response= JsonResponse(data)
