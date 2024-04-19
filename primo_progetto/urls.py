@@ -24,6 +24,11 @@ urlpatterns = [
     path('seconda_app/',include("seconda_app.urls",namespace="seconda_app")),
     path('news/',include("news.urls",namespace="news")),
     path('products/',include("products.urls",namespace="products")),
+    #path('products/',include("products.urls",namespace="products")),
     path('prova_pratica_1/',include("prova_pratica_1.urls",namespace="prova_pratica_1")),
-    path('',index,name="index_root")
+    path('',index,name="index_root"),
+]
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
