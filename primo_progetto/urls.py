@@ -27,6 +27,7 @@ urlpatterns = [
     #path('products/',include("products.urls",namespace="products")),
     path('prova_pratica_1/',include("prova_pratica_1.urls",namespace="prova_pratica_1")),
     path('',index,name="index_root"),
+    path('forms_app/',include("forms_app.urls",namespace="forms_app")),
 ]
 #Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
