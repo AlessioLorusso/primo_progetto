@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
 {% block content %} 
 <div class="container"> 
     <h1>Modifica contatto</h1> 
@@ -10,7 +13,7 @@
         Questo campo contiene un token CSRF univoco che viene verificato dal server quando il modulo viene inviato.
         Se il token CSRF non corrisponde a quello atteso dal server, la richiesta viene rifiutata.
         {% endcomment %}
-        {{ form crispy }}
+        {{ form|crispy }}
         <input type="submit" class="btn btn-primary" value="SALVA MODIFICHE">
     </form>
 </div>
